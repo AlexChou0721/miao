@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        body > * > *  {
+            width: 600px;
+            margin: auto;
+        }
+        
+
+        header {
+            background-color: black;
+        }
+        .header {
+            color: white;
+            background-color: black;
+        }
+
+        main > div{
+            margin-top: 1em;
+        }
+
+        
+        
+
+        main .b div {
+            width:180px;
+            height: 40px;
+            box-sizing: border-box;
+            background-color: pink;
+            border: 3px solid black;
+            text-align: center;
+            vertical-align: middle;
+            xline-height: 34px;
+        } 
+        
+        main .b div {
+            margin-bottom: 15px;
+        }
+
+        main .b div:nth-child(n+5):nth-child(-n+8) {
+            margin-left: 210px;
+
+        }
+
+        main .b div:nth-child(n+9):nth-child(-n+12) {
+            margin-left: 420px;
+            
+        }
+
+        main .b div:nth-child(5) {
+            margin-top: -220px;
+        }
+        main .b div:nth-child(9) {
+            margin-top: -220px;
+        }
+
+        main .c p {
+            border-bottom: 1px dotted black;
+            margin-bottom: -15px;
+        }
+        main .c p:last-child {
+            border-bottom: 0px;
+            margin-bottom: 15px;
+        }
+
+
+        body > div {
+            background-color: magenta;
+        }
+
+        body > div p {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            
+            hello world 请调整窗口浏览器大小查看效果hello world 请调整窗口浏览器大小查看效果hello world 请调整窗口浏览器大小查看效果hello world 请调整窗口浏览器大小查看效果hello world 请调整窗口浏览器大小查看效果hello world 请调整窗口浏览器大小查看效果
+        </div>
+    </header>
+
+    <main>
+        <div class="a">
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+            页面主体 宽度600px 
+        </div>
+
+        <div class="b">
+            <div>宽180高40(包含边框)</div>
+            <div>水平间隙30px</div>
+            <div>垂直间隙15px</div>
+            <div>边框宽度3px</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+        </div>
+
+        <div class="c">
+            <p>link</p>
+            <p>link</p>
+            <p>link</p>
+            <p>link</p>
+            <p>link</p>
+        </div>
+    </main>
+
+    <div>
+        <p>
+            &copy版权所有<br>
+            本页所有布局均使用块元素
+        </p>
+    </div>
+</body>
+</html>
