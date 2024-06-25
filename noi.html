@@ -1,0 +1,238 @@
+<script type="ok" id="ch0103/01">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+
+    var c = a + b
+    console.log(c)
+</script>
+
+<script type="ok" id="ch0103/02">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+
+
+    var ret = (a + b) * c
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/03">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+
+
+    var ret = (a + b) / c
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/04">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = parseInt(a / b)
+    var d = a - (b * c)
+
+    console.log(c)
+    console.log(d)
+</script>
+
+<script type="ok" id="ch0103/05">
+    //自定义一个四舍五入方法
+    //round()是四舍五入函数
+    //pow(10, n) 10的n次方
+    function roundFun(val, n) {
+        return Math.round(val * Math.pow(10, n)) / Math.pow(10, n);
+    }
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var ret = roundFun(a / b, 4)
+
+
+    console.log(ret)
+    //console.log(d)
+</script>
+
+<script type="ok" id="ch0103/06">
+    function roundFun(val, n) {
+        return Math.round(val * Math.pow(10, n)) / Math.pow(10, n);
+    }
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var ret = roundFun(b / a * 100, 3)
+
+
+    console.log(ret + '%')
+    //console.log(d)
+</script>
+
+<script type="ok" id="ch0103/07">
+    function roundFun(val, n) {
+        return Math.round(val * Math.pow(10, n)) / Math.pow(10, n);
+    }
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+    var d = Number(prompt("请输入d"))
+    var e = Number(prompt("请输入e"))
+
+    var f = b * a ** 3 + c * a * a + d * a + e
+    var ret = roundFun(f, 7)
+
+
+    console.log(ret)
+    //console.log(d)
+</script>
+
+<script type="ok" id="ch0103/08">
+    var a = Number(prompt("请输入a"))
+    //var b = Number(prompt("请输入b"))
+
+    var ret = (5 * (a - 32) / 9).toFixed(5)
+
+
+    console.log(ret)
+
+</script>
+
+<script type="ok" id="ch0103/09">
+
+    var a = Number(prompt("请输入a"))
+    //var b = Number(prompt("请输入b"))
+    const Π = 3.14159
+    var ret_1 = (2 * a).toFixed(4)
+    var ret_2 = (2 * a * Π).toFixed(4)
+    var ret_3 = (Π * a * a).toFixed(4)
+
+
+    console.log(ret_1)
+    console.log(ret_2)
+    console.log(ret_3)
+
+
+</script>
+
+
+<script type="ok" id="ch0103/10">
+
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+
+    var ret = (1 / (1 / a + 1 / b)).toFixed(2)
+
+
+    console.log(ret)
+</script>
+
+
+<script type="ok" id="ch0103/11">
+
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+
+    var c = parseInt(a / b)
+    var ret = (a - (b * c)).toFixed(4)
+
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/12">
+    var a = Number(prompt("请输入a"))
+    //var b = Number(prompt("请输入b"))
+    const Π = 3.14
+
+    var ret = (4 / 3 * Π * a ** 3).toFixed(2)
+
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/13">
+    var a = Number(prompt("请输入a"))
+    //var b = Number(prompt("请输入b"))
+
+    var ret = ''
+    while (a > 0) {
+        var digit = String(a % 10)
+        ret = ret + digit
+        a = parseInt(a / 10)
+    }
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/14">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    const Π = 3.14
+
+    var c = a * Π * b * b
+    var ret = Math.ceil(20 / (c / 1000))
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/15">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+
+    var ret = a - Math.ceil(c / b)
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/16">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+    var d = Number(prompt("请输入d"))
+
+    var ret = Math.sqrt((a - c) * (a - c) + (b - d) * (b - d)).toFixed(3)
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/17">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+    var d = Number(prompt("请输入d"))
+    var e = Number(prompt("请输入e"))
+    var f = Number(prompt("请输入f"))
+
+    var l1 = Math.sqrt((a - c) ** 2 + (b - d) ** 2)
+    var l2 = Math.sqrt((a - e) ** 2 + (b - f) ** 2)
+    var l3 = Math.sqrt((e - c) ** 2 + (f - d) ** 2)
+
+    var p = (l1 + l2 + l3) / 2
+    var ret = Math.sqrt(p * (p - l1) * (p - l2) * (p - l3)).toFixed(2)
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/18">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    var c = Number(prompt("请输入c"))
+
+    var ret = b + (b - a) * (c - 2)
+
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/19">
+    var a = Number(prompt("请输入a"))
+    var b = Number(prompt("请输入b"))
+    //var c = Number(prompt("请输入c"))
+
+    var ret = a * b
+
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0103/20">
+    var a = Number(prompt("请输入a"))
+    //var b = Number(prompt("请输入b"))
+    //var c = Number(prompt("请输入c"))
+    var ret = 1
+    while (a > 0) {
+        ret *= 2
+        a -= 1
+    }
+
+    console.log(ret)
+</script>

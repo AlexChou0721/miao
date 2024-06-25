@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 350px;
+            display: none;
+            /* 隐藏所有图片 */
+        }
+
+        img:first-of-type {
+            display: block;
+            xposition: absolute;
+            /* 显示第一张图片 */
+        }
+
+        div {
+            position: relative;
+            
+        }
+
+        input#radio1{
+            position: absolute;
+            bottom: 5px;
+            left: 270px;
+            opacity: 0.6;
+        }
+        input#radio2{
+            position: absolute;
+            bottom: 5px;
+            left: 295px;
+            opacity: 0.6;
+        }
+        input#radio3{
+            position: absolute;
+            bottom: 5px;
+            left: 320px;
+            opacity: 0.6;
+        }
+
+        input:checked + * + * + img {
+            display: block;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        
+            <input type="radio" name="a" id="radio1">
+            <input type="radio" name="a" id="radio2">
+            <input type="radio" name="a" id="radio3">
+        
+
+
+        <img src="https://lp-cms-production.imgix.net/2024-06/GettyImages-169646576.jpeg?auto=format&w=1440&h=810&fit=crop&q=75"
+            alt="">
+        <img src="https://lp-cms-production.imgix.net/2024-05/GettyImages-1500854679.jpg?auto=format&q=75&w=1920"
+            alt="">
+        <img src="https://lp-cms-production.imgix.net/2024-06/croatia-vs-italy-2024.png?auto=format&w=1440&h=810&fit=crop&q=75"
+            alt="">
+
+</body>
+
+</html>
