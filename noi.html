@@ -22,7 +22,7 @@
     var c = Number(prompt("请输入c"))
 
 
-    var ret = (a + b) / c
+    var ret = parseInt((a + b) / c)
     console.log(ret)
 </script>
 
@@ -36,7 +36,7 @@
     console.log(d)
 </script>
 
-<script type="ok" id="ch0103/05">
+<script id="ch0103/05">
     //自定义一个四舍五入方法
     //round()是四舍五入函数
     //pow(10, n) 10的n次方
@@ -45,7 +45,7 @@
     }
     var a = Number(prompt("请输入a"))
     var b = Number(prompt("请输入b"))
-    var ret = roundFun(a / b, 4)
+        var ret = (a / b).toFixed(9)
 
 
     console.log(ret)
