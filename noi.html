@@ -513,7 +513,7 @@
     }
 </script>
 
-<script type="ok" id="ch0104/19">
+<script id="ch0104/19">
     var a = Number(prompt("请输入a"))
     var b = Number(prompt("请输入b"))
     var c = String(prompt("请输入c"))
@@ -535,8 +535,10 @@
         case '/':
             if (b == 0) {
                 console.log('Divided by zero!')
+                break
             }
             ret = a / b
+            console.log(ret)
             break
         default:
             console.log('Invalid operator!')
@@ -565,8 +567,8 @@
         var imag = (Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)
 
 
-        console.log(real + '+' + imag + 'i')
-        console.log(real + '-' + imag + 'i')
+        console.log('x1='real + '+' + imag + 'i')
+        console.log('x2='real + '-' + imag + 'i')
 
     }
 
