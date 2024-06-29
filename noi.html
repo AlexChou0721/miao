@@ -934,25 +934,282 @@
     
 </script>
 
-<script type="" id="ch0105/18">
-    //鸡尾酒疗法
-    var a = Number(prompt("请输入样本量"))
+<script type="ok" id="ch0105/19">
+    //救人
+    var a = Number(prompt("请输入屋顶数"))
 
-    //输入鸡尾酒疗法效果
-    var b1 = Number(prompt("请输入鸡尾酒数据1"))
-    var b2 = Number(prompt("请输入鸡尾酒数据2"))
-    var x = b2 / b1
+    var sum = 0   //总时间
     
-    for (var i = 0; i < (a-1); i++) {
-        var c1 = Number(prompt("请输入数据"))
-        var c2 = Number(prompt("请输入数据"))
-        var y = c2 / c1
-        if ((y-x) > 0.05) {
-            console.log('better')
-        }else if ((x - y)>0.05) {
-            console.log('worse')
+    for (var i = 0; i < a; i++) {
+        var c1 = Number(prompt("请输入横坐标"))
+        var c2 = Number(prompt("请输入纵坐标"))
+        var people = Number(prompt("请输入人数"))
+
+        var s = Math.sqrt(c1**2 + c2**2)    //路程
+        var t = Math.ceil(2*s/50+people*1.5)
+        sum += t
+    }
+    console.log(sum)
+</script>
+
+
+<script type="ok" id="ch0105/20">
+    //球弹跳高度
+    //等比数列求和
+    var a = Number(prompt("请输入球的初始高度"))
+
+    var ret1 = 2*(a*(1-(1/2)**11))/(1/2)-a
+    var ret2 = (a * (1/2)**10).toFixed(7)
+    
+    console.log(ret1)
+    console.log(ret2)
+</script>
+
+<script type="ok" id="ch0105/21">
+    //角谷猜想
+    var a = Number(prompt("请输入数字"))
+
+    while(a != 1) {
+        if (a%2==0) {
+            console.log(a+'/2='+(a/2))
+            a /= 2
         }else {
-            console.log('same')
+            console.log(a+'*3+1='+(a*3+1))
+            a = a*3+1
+        }
+    }
+    console.log('End')
+    //console.log(ret2)
+</script>
+
+
+<script type="ok" id="ch0105/22">
+    //储蓄计划
+    var remainder = 0   //上个月剩的
+    var rep = 0 //妈妈那里存的
+    var flg = 0
+    for(var i = 0;i < 12;i++) {
+        var b = Number(prompt("请输入该月预算"))
+        //判断该月零花钱够不够预算
+        var now = remainder + 300 
+        if (now < b) {
+            console.log(-(i+1))
+            flg = 1
+            continue
+        }
+        //如果预算够，算该月结余（扣除掉交给妈沫的）
+        rep = Math.trunc(now-b)
+        remainder = now-b-rep
+
+    }
+    if (flg == 0) {
+        console.log(rep*1.2)
+    }
+    
+
+</script>
+
+<script type="ok" id="ch0105/23">
+    //药房管理
+    var rep = Number(prompt("请输入药品总量"))
+    var p = Number(prompt("请输入取药人数"))
+    var remainder = rep
+    var cnt = 0
+    for (var i = 0; i < p;i++) {
+        var ask = Number(prompt("请输入单次取药数量"))
+        if(remainder >= ask ) {
+            remainder -= ask
+
+        }else {
+            cnt++
+            continue
+        }
+    }
+    console.log(cnt)
+</script>
+
+
+<script type="ok" id="ch0105/24">
+    //正常血压
+    //连续正常最小
+    var n = Number(prompt("请输入测量血压次数"))
+    
+    var cnt = 0
+    for (var i = 0; i < n;i++) {
+        var a = Number(prompt("请输入收缩血压"))
+        var b = Number(prompt("请输入舒张血压"))
+
+        if(a <=140 && a >= 90 && b >= 60 && b <= 90) {
+            cnt++
+        }else {
+            cnt = 0
+        }
+    }
+    console.log(cnt)
+</script>
+
+<script type="ok" id="ch0105/25">
+    //特殊自然数
+    
+    for (var i = 100; i < 300; i++) {
+        var seven = i.toString(7)
+        var night = i.toString(9)
+        if (seven.length === 3 && night.length === 3) {
+            if (seven === night.split('').reverse().join('')) {
+                console.log(i)
+            }
+        }
+    }
+    
+</script>
+
+
+<script type="ok" id="ch0105/26">
+    //特殊自然数
+    var n = Number(prompt("输入四位数的个数"))
+    var cnt = 0
+    for (var i = 0; i < n; i++) {
+        var num = Number(prompt("输入四位数"))
+        var a = num % 10    // 个位
+        num = Math.trunc(num /10)
+        var b = num % 10    //十位
+        num = num / 10
+        var c = num % 10    //百位
+        num = num / 10
+        var d = num % 10    //千
+        if (a -(b+c+d) > 0 ) {
+            cnt ++
+        }
+        
+    }
+    console.log(cnt)
+</script>
+
+<script type="ok" id="ch0105/27">
+    //级数求和
+    var k = Number(prompt("输入k"))
+    var s = 0
+    var n = 0
+    while(s <= k){
+        n++
+        s = s + (1/n)
+    }
+    
+    console.log(n)
+</script>
+
+<script type="ok" id="ch0105/28">
+    //分离整数的各个部位
+    var n = Number(prompt("输入整数"))
+    
+    var ret = 0
+    while(n > 0){
+        var digi = n % 10
+        n = Math.trunc(n/10)
+        ret = ret + digi +" "
+    }
+    
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0105/29">
+    //数字反转
+    var n = Number(prompt("输入整数"))
+    var a = n
+    if (a < 0) {
+        a = Math.abs(a)
+    }
+    
+    var ret = ""
+    while(a > 0){
+        var digi = a % 10
+        a = Math.trunc(a/10)
+        ret = ret+digi
+    }
+    if (n < 0) {
+        console.log("-"+ret)
+    }else {
+        console.log(ret)
+
+    }
+</script>
+
+<script type="ok" id="ch0105/30">
+    //含k个3的整数
+    var m = Number(prompt("输入整数m"))
+    var k = Number(prompt("输入整数k"))
+    var cnt = 0
+    if (m % 19 == 0) {
+        var num = m
+        while (num > 0) {
+            var digi = num % 10
+            if (digi == 3) {
+                cnt++
+            }
+            num = Math.trunc(num / 10)
+            //console.log(num)
+        }
+    }
+    //console.log(cnt)
+    if (cnt == k) {
+        console.log("YES")
+    }else {
+        console.log("NO")
+    }
+</script>
+
+
+<script type="ok" id="ch0105/31">
+    //开关灯
+    //输出关闭的灯
+    var light = Number(prompt("输入灯的数量"))
+    var people = Number(prompt("输入人数"))
+    var cnt = 0
+
+    //将所有灯设置为打开状态
+    for (var i = 0; i < light ;i++) {
+        var st = 
+    }
+    
+</script>
+
+<script type="" id="ch0105/42">
+    //画矩形
+    var h = Number(prompt("输入高"))
+    var w = Number(prompt("输入宽"))
+    var sig = prompt("输入符号")
+    var x = Number(prompt("空心还是实心"))
+    
+    if(x == 0) {
+        //空心
+        for (var i = 0 ; i < h; i++) {
+            var ret = ""
+            if(i == 0 || i == (h-1)){
+                for (var j = 0; j < w; j++) {
+                    ret = ret + sig
+    
+                }
+            }else {
+                for (var j = 0; j < w; j++) {
+                    if (j == 0 || j == (w-1)) {
+                        ret = ret + sig
+
+                    }else {
+                        ret = ret +" "
+                    }
+                }
+            }
+            console.log(ret)
+
+        }
+    }else {
+        //实心
+        for (var i = 0 ; i < h; i++) {
+            var ret = ""
+            for (var j = 0; j < w; j++) {
+                ret = ret + sig
+            }
+            console.log(ret)
         }
     }
     
