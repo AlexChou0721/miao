@@ -1173,7 +1173,82 @@
     
 </script>
 
-<script type="" id="ch0105/42">
+<script type="ok" id="ch0105/34">
+    //阶乘之和
+    var n = Number(prompt("请输入数字"))
+    var ret = 0
+    
+    for (var i = 1; i <= n; i++) {
+        var x = 1
+        for (var j = 1; j <= i; j++) {
+            x *= j
+        }
+        console.log(x)
+        ret += x
+    }
+    console.log(ret)
+</script>
+
+<script type="ok" id="ch0105/37">
+    //雇佣兵
+    var m = Number(prompt("最大体力值"))
+    var n = Number(prompt("战斗力"))
+    var x = Number(prompt("能量元素"))
+
+
+
+</script>
+
+<script type="ok" id="ch0105/39">
+    //与7无关的数
+    var n = Number(prompt("请输入数字"))
+    var ret = 0
+    for (var i = 1; i < n; i++) {
+        var tmp = String(i)
+        if (i % 7 == 0 || (tmp.includes('7'))) {
+            continue
+        }
+        //console.log(i)
+        ret += i*i
+    }
+    //console.log(ret)
+
+</script>
+
+<script type="ok" id="ch0105/40">
+    //数1的个数
+    var n = Number(prompt("输入数字"))
+    var cnt = 0
+    for (var i = 1; i <= n; i++) {
+        var tmp = String(i)
+        for (char of tmp) {
+            if (char == '1') {
+                cnt++
+            }
+        }
+    }
+    console.log(cnt)
+</script>
+
+
+<script type="ok" id="ch0105/41">
+    //数字统计
+    var n = Number(prompt("输入数字n"))
+    var m = Number(prompt("输入数字m"))
+
+    var cnt = 0
+    for (var i = n; i <= m; i++ ) {
+        var tmp = String(i)
+        for (char of tmp) {
+            if (char == '2') {
+                cnt++
+            }
+        }
+    }
+    console.log(cnt)
+</script>
+
+<script type="ok" id="ch0105/42">
     //画矩形
     var h = Number(prompt("输入高"))
     var w = Number(prompt("输入宽"))
@@ -1213,4 +1288,31 @@
         }
     }
     
+</script>
+
+<script type="ok" id="ch0105/45">
+    //国王发金币
+    var day = Number(prompt("输入天数"))
+    //console.log(day)
+    var sum = 0
+    var i = 0
+    var ret = 0
+    while (sum < day) {
+        i++
+        sum += i
+        //console.log(sum)
+    }
+    if (day == sum) {
+        for (var j = 1; j <= i; j++) {
+            ret += (j * j)
+        }
+    } else {
+        for (var j = 1; j < i; j++) {
+            ret += (j * j)
+        }
+        ret += (day - (sum - i)) * i
+    }
+    console.log(ret)
+
+
 </script>
