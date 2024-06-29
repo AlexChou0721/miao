@@ -1194,7 +1194,7 @@
 
 </script>
 
-<script id="ch0105/33">
+<script type="ok" id="ch0105/33">
     //分数加减表达式的值
     var n = Number(prompt("请输入数字："))
     var ret = 1
@@ -1222,14 +1222,45 @@
     console.log(ret)
 </script>
 
+<script type="ok" id="ch0105/35">
+    //求e的值
+    //小数点后面不对
+    var n = Number(prompt("请输入数字"))
+    var ret = 1
+
+    for (var i = 0; i < (n - 1); i++) {
+        var time = 1
+        for (var j = 1; j <= (i + 1); j++) {
+            time = time * j
+        }
+        ret = ret + (1 / time)
+    }
+    console.log(ret.toFixed(10))
+</script>
+
+<script type="ok" id="ch0105/36">
+    //计算多项式的值
+    var x = Number(prompt("请输入x"))
+    var n = Number(prompt("请输入n"))
+
+    var ret = 0
+    for (var i = 0; i <= n; i++) {
+        ret = ret + Math.pow(x, i)
+    }
+    console.log(ret.toFixed(2))
+</script>
+
 <script type="ok" id="ch0105/37">
     //雇佣兵
+    //读不懂题
     var m = Number(prompt("最大体力值"))
     var n = Number(prompt("战斗力"))
     var x = Number(prompt("能量元素"))
+</script>
 
-
-
+<script id="ch0105/38">
+    //计算多项式的导函数
+    
 </script>
 
 <script type="ok" id="ch0105/39">
@@ -1321,6 +1352,15 @@
         }
     }
     
+</script>
+
+<script id="ch0105/43">
+    //
+</script>
+
+
+<script id="ch0105/44">
+    //
 </script>
 
 <script type="ok" id="ch0105/45">
