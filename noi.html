@@ -1173,6 +1173,39 @@
     
 </script>
 
+<script type="ok" id="ch0105/32">
+    //分数序列求和
+    var n = Number(prompt("请输入数字"))
+    var p = 1
+    var q = 2
+
+    var sum = 2
+    for (var i = 0; i < (n - 1); i++) {
+        var x = (p + q)
+        var y = q
+
+        q = x
+        p = y
+        sum = sum + (q / p)
+        //console.log(q)
+        //console.log(p)
+    }
+    console.log(sum.toFixed(4))
+
+</script>
+
+<script id="ch0105/33">
+    //分数加减表达式的值
+    var n = Number(prompt("请输入数字："))
+    var ret = 1
+
+    for (var i = 0; i < (n - 1); i++) {
+        ret = ret + ((-1) ** (i + 1) * (1 / (i + 2)))
+    }
+    console.log(ret.toFixed(4))
+
+</script>
+
 <script type="ok" id="ch0105/34">
     //阶乘之和
     var n = Number(prompt("请输入数字"))
