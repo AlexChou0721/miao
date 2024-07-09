@@ -20,51 +20,23 @@ Released under the MIT license: http://jsbin.mit-license.org
   background-color: rgba(0,0,0,0.08);
   box-shadow: inset 0 0 1px red;
 }
+html, body {
+  margin: 0;
+  height: 100%;
+}
+div {
+  height: 100%;
+  display: grid;
+  --aside-width: 150px; /*用变量，只需修改一处*/
+grid-template-columns: var(--aside-width) auto repeat(2,var(--aside-width));
+grid-template-rows: 100px auto;
 
-
-.a {
-  display: inline-grid;
-  width: 400px;
-  height: 400px;
-  
-  grid-template-columns: 20px 40px 20px ;
-   grid-template-rows: 20px 20px 20px; 
-  justify-content: center;
-  grid-template-areas: 
-    'header header header'
-    'left main right'
-    'footer footer footer';
-  gap: 5px; 
 }
 
-span.header {
-  grid-area: header;
-}
-span.left {
-  grid-area:left;
-}
-span.footer {
-  grid-area:footer;
+aside {
+  grid-row: span 2;
 }
 
-
-.b {
- display: grid;
- height: 400px;
-  grid-template-columns: 1fr 10fr 1fr ;
-    grid-template-rows: 1fr 10fr; 
-  grid-template-areas:
-    'nav head head'
-    'nav main side'
-}
-
-
-.nav {
-  grid-area:nav;
-}
-.head {
-  grid-area:head
-}
 
 
 
@@ -73,16 +45,16 @@ span.footer {
 </head>
 <body>
   
-
-  a 
   <div>
-    <span  class="header">1</span>
-    <span class="left">2</span>
-    <span class="main">3</span>
-    <span class="right">4</span>
-    <span class="footer">5</span>
+    <aside class="left">left</aside>
+    <header>header</header>
+    <aside class="right1">right1</aside>
     
+    <aside class="right2">right2</aside>
+    
+    <main>main</main>
+
   </div>
-  AAAA
+  
 </body>
 </html>
