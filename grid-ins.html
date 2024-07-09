@@ -1,69 +1,42 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2024 by anonymous (http://jsbin.com/kipecosode/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-  
-<style id="jsbin-css">
-* {
-  background-color: rgba(0,0,0,0.08);
-  box-shadow: inset 0 0 1px red;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-ins</title>
+  <style>
+    * {
+      background: rgba(0,0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: repeat(3, 70px);
+      /*行自动*/
+
+      
+    }
+    span {
+      /*格子长宽一比一*/
+      aspect-ratio: 1/1;
+      /*将span地display设置为flex是为了调整文字在正中央*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span:nth-child(12n+1),
+    span:nth-child(12n+8) {
+      grid-row-end: span 2;
+      grid-column-end: span 2;
+    }
 
 
-div {
-  display:grid;
-  width: 200px;
-  
-}
-
-span {
-  aspect-ratio: 1/1;
-  display: flex;
-  font-size: 32px;
-  align-items: center;
-  justify-content:center;
-}
-
-span:nth-child()
-
-
-
-
-</style>
+  </style>
 </head>
 <body>
-  <div class="grid-cols-3">
-    <span>01</span>
-    <span>02</span>
-    <span>03</span>
-    <span>04</span>
-    <span>05</span>
-    <span>06</span>
-    <span>07</span>
-    <span>08</span>
-    <span>09</span>
-    <span>10</span>
-    <span>11</span>
-    <span>12</span>
-    <span>13</span>
-    <span>14</span>
-    <span>15</span>
-    <span>16</span>
-    <span>17</span>
-    <span>18</span>
-    <span>19</span>
-    <span>20</span>
+  <div>
+    <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span><span>35</span><span>36</span><span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span><span>43</span><span>44</span><span>45</span>
   </div>
 </body>
 </html>
