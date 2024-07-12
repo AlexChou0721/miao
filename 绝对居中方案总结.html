@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: rgba(0,0,0,0.08);
+            box-shadow: inset 0 0 1px red;
+        }
+
+        section {
+            width: 200px;
+            height: 200px;
+        }
+        span {
+            display: block;
+            width: 110px;
+            height: 70px;
+        }
+
+        /* 通过定位实现
+        要求：子元素只能比父元素小；且子元素要定宽高 */
+        section.a {
+            position: relative;
+            > span {
+                position: absolute;
+                margin: auto;
+                /* inset是同时设置 top right bottom left四种属性 */
+                inset: 0;
+            }
+            
+        }
+
+        /* 用2d变换：transform实现 
+        要求：子元素可以不定宽定高;子元素可以比父元素大*/
+        section.b {
+            position: relative;
+            > span {
+                position: absolute;
+                width: auto;
+                height: auto;
+                left:50%; /*移动的是父元素的50%*/
+                top:50%;
+                transform: translate(-50%,-50%);/*trans自己的50%*/
+            }
+        }
+
+        /*flex 
+        子元素可以比父元素大，是常规流*/
+        section.c {
+            display: flex;
+            justify-content: center;
+            > span {
+                width: 30px;
+                height: 40px;
+                flex-shrink: 0;
+                align-self: center;
+                margin: auto;
+            }
+        }
+
+
+        /*grid 同flex
+        子元素可以比父元素大，是常规流*/
+        section.d {
+            display: grid;
+            justify-content: center;
+            > span {
+                width: auto;
+                height: auto;
+                align-self: center;
+                margin: auto; 
+            }
+        }
+        /*table-cell 水平居中比较麻烦，且子要比父小，常规流，
+        意味着周围摆不了东西*/
+        section.e {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center; /*会继承给span，ee会水平居中*/
+            > span {
+                display: block;  /*自动占据一行*/
+                margin: auto;
+                
+            }
+        }
+
+        section.f {
+            line-height: 200px;
+            font-size: 0;
+            text-align: center; /*文字水平居中，继承给span*/
+            > span {
+                display: inline-block;
+                font-size: 16px;
+                line-height: normal;
+                vertical-align: middle;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 居中：子元素在水平和垂直方向上均居中 -->
+     <section class="a"><span>aa</span></section>
+     <section class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores veritatis blanditiis repellat fugiat earum consequuntur unde doloremque? Autem earum quaerat, esse fugit iure suscipit saepe offic<span>bb</span></section>
+     <section class="c"><span>cc</span></section>
+     <section class="d"><span>dd</span></section>
+     <section class="e">hh<span>ee</span></section>
+     <section class="f"><span>ff</span></section>
+</body>
+</html>
