@@ -21,9 +21,9 @@
         .face {
             display: inline-block;
             font-size: 48px;
-            width: 200px;
+            width: 200px; /*将包emoji的大盒子边长设置为圆的半径，便于观察*/
             height: 200px;
-            transform-origin: 200px 200px;
+            transform-origin: 200px 200px; /*以face盒子的左上角为原点写坐标，该坐标刚好是圆心*/
             animation: orbit linear 10s infinite;
         }
         .reverse {
@@ -31,12 +31,14 @@
             transform-origin:center;
             /* center表示，reverse这个框以自己的中心点为圆心旋转 */
             animation: orbit linear reverse 10s infinite;
+            /*包emoji的小盒子反着旋转，可保证emoji始终正对屏幕*/
             
         }
 
         @keyframes orbit {
             0% {
                 transform: rotateZ(0deg);
+                /*Z轴垂直于屏幕，因此应该绕着Z轴旋转*/
             }
             100% {
                 transform: rotateZ(360deg);
